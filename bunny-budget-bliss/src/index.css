@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BunnyBudget Design System - Kawaii Pastel Theme
+All colors MUST be HSL for proper theming.
+*/
+
+@layer base {
+  :root {
+    /* Kawaii Pastel Base Colors */
+    --background: 340 100% 99%;
+    --foreground: 320 15% 25%;
+
+    /* Card & Surface Colors */
+    --card: 340 100% 98%;
+    --card-foreground: 320 15% 25%;
+
+    --popover: 340 100% 98%;
+    --popover-foreground: 320 15% 25%;
+
+    /* Primary - Bunny Pink */
+    --primary: 340 65% 75%;
+    --primary-foreground: 340 100% 98%;
+    --primary-light: 340 80% 85%;
+    --primary-glow: 340 90% 90%;
+
+    /* Secondary - Lavender Dream */
+    --secondary: 260 55% 80%;
+    --secondary-foreground: 260 30% 25%;
+    --secondary-light: 260 70% 88%;
+
+    /* Accent - Mint Fresh */
+    --accent: 150 40% 75%;
+    --accent-foreground: 150 30% 25%;
+    --accent-light: 150 50% 85%;
+
+    /* Cute Animal Colors */
+    --bunny: 340 65% 75%;
+    --bear: 30 45% 70%;
+    --fox: 25 70% 65%;
+    --cat: 260 55% 80%;
+
+    /* Muted & Neutral */
+    --muted: 340 30% 95%;
+    --muted-foreground: 320 15% 45%;
+
+    /* Success & Warning (Soft) */
+    --success: 150 40% 65%;
+    --success-foreground: 150 30% 25%;
+    --warning: 45 70% 70%;
+    --warning-foreground: 45 30% 25%;
+    --destructive: 0 55% 70%;
+    --destructive-foreground: 0 30% 25%;
+
+    /* Interactive Elements */
+    --border: 340 25% 90%;
+    --input: 340 30% 95%;
+    --ring: 340 65% 75%;
+
+    /* Kawaii Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-light)));
+    --gradient-rainbow: linear-gradient(90deg, hsl(var(--primary-light)), hsl(var(--secondary-light)), hsl(var(--accent-light)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--primary-glow)));
+
+    /* Cute Shadows */
+    --shadow-soft: 0 4px 15px hsl(var(--primary) / 0.15);
+    --shadow-glow: 0 0 20px hsl(var(--primary-glow) / 0.4);
+    --shadow-card: 0 8px 25px hsl(var(--primary) / 0.1);
+
+    /* Border Radius - Extra Round for Cute Factor */
+    --radius: 1rem;
+    --radius-sm: 0.75rem;
+    --radius-lg: 1.5rem;
+    --radius-full: 9999px;
+
+    /* Animations */
+    --transition-cute: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --bounce-cute: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    /* Dark mode keeps the same cute aesthetic but with darker tones */
+    --background: 320 25% 8%;
+    --foreground: 340 100% 95%;
+    --card: 320 25% 10%;
+    --card-foreground: 340 100% 95%;
+    --popover: 320 25% 10%;
+    --popover-foreground: 340 100% 95%;
+    --primary: 340 65% 65%;
+    --primary-foreground: 320 25% 8%;
+    --secondary: 260 35% 40%;
+    --secondary-foreground: 340 100% 95%;
+    --accent: 150 30% 45%;
+    --accent-foreground: 340 100% 95%;
+    --muted: 320 20% 15%;
+    --muted-foreground: 340 20% 70%;
+    --border: 320 20% 20%;
+    --input: 320 20% 15%;
+    --ring: 340 65% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
